@@ -55,8 +55,8 @@ def lock(args):
 def unlock(args):
     p=Servo(args.pin,50)
     p.start()
-    p.go(180)
-    p.go(180)
+    p.go(0)
+    p.go(0)
     p.stop()
 
 def move(args):
@@ -68,18 +68,22 @@ def move(args):
 if __name__=="__main__":
     import argparse
     parser = argparse.ArgumentParser(description='Control display for escrow.')
-    parser.add_argument('pin',type=int, help='The data GPIO pin for the servo',default=19)
+    
     subparsers = parser.add_subparsers(help='Choose a prompt.')
 
-    lockParse = subparsers.add_parser('lock', help='Move servo to lock position')  
+    lockParse = subparsers.add_parser('lock', help='Move servo to lock position')
+    lockParse.add_argument('--pin',type=int, help='The data GPIO pin for the servo',default=19)
+    
     lockParse.set_defaults(func=lock)
     
-    unlockParse = subparsers.add_parser('unlock', help='Move servo to unlock position') 
+    unlockParse = subparsers.add_parser('unlock', help='Move servo to unlock position')
+    unlockParse.add_argument('--pin',type=int, help='The data GPIO pin for the servo',default=19)
     unlockParse.set_defaults(func=unlock)
     
     move = subparsers.add_parser('move', help='Move servo to a specific position')
     move.add_argument('angle',type=int, help='angle in degrees to move the servo.')
-    unlockParse.set_defaults(func=move)
+    move.add_argument('--pin',type=int, help='The data GPIO pin for the servo',default=19)
+    move.set_defaults(func=move)
 
     args = parser.parse_args()
     args.func(args)
