@@ -1,3 +1,7 @@
+## Context
+
+This tool is showcased in the project [IotaWorkshop](https://github.com/Tsangares/iotaworkshop)
+
 # Summary
 
 This tool can be both used as a command line interface or be imported into your project. What this repo has that others do not is some math to calculate the estimated time it takes to rotate the servo to a sepecific destination. The utility handles all the pin IO and all you have to do is specify the location the servo needs to be in and the library will do the rest.
