@@ -1,9 +1,0 @@
-README.md
-setup.py
-piservo.egg-info/PKG-INFO
-piservo.egg-info/SOURCES.txt
-piservo.egg-info/dependency_links.txt
-piservo.egg-info/entry_points.txt
-piservo.egg-info/top_level.txt
-src/__init__.py
-src/servo.py
