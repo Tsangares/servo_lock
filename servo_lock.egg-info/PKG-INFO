@@ -1,11 +1,37 @@
 Metadata-Version: 2.1
 Name: servo-lock
-Version: 0.0.1.2
+Version: 0.0.1.4
 Summary: Servo utility for the MG996R; but any servo works.
 Home-page: https://github.com/Tsangares/lock_servo
 Author-email: william.wyatt@cgu.edu
 License: UNKNOWN
-Description: UNKNOWN
+Description: # Summary
+        
+        This tool can be both used as a command line interface or be imported into your project. What this repo has that others do not is some math to calculate the estimated time it takes to rotate the servo to a sepecific destination. The utility handles all the pin IO and all you have to do is specify the location the servo needs to be in and the library will do the rest.
+        
+        # Installation
+        
+        This project requires `RPi.GPIO`, and I installed it using the arch repo using,
+        
+            yay -S python-raspberry-gpio
+        	
+        But ubuntu or rasbian can use,
+        
+            pip install RPi.GPIO
+        
+        To install the servo library simply pull from the pip repo,
+        
+            pip install servo-lock
+        	
+        # Command Line Interface Examples
+        
+        To send the servo to a sepecific location simply use the command
+        
+            servo move 19 90 #Moves the servo on pin 19 to 90 degrees
+        
+        
+        
+        
 Platform: UNKNOWN
 Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: MIT License
