@@ -74,13 +74,13 @@ def main():
 
     lockParse = subparsers.add_parser('lock', help='Move servo to lock position')
     lockParse.add_argument('--pin',type=int, help='The data GPIO pin for the servo',default=19)
-    move.add_argument('--angle',type=int, help='angle in degrees to move the servo.',default=90)
+    lockParse.add_argument('--angle',type=int, help='angle in degrees to move the servo.',default=90)
     
     lockParse.set_defaults(func=lock)
     
     unlockParse = subparsers.add_parser('unlock', help='Move servo to unlock position')
     unlockParse.add_argument('--pin',type=int, help='The data GPIO pin for the servo',default=19)
-    move.add_argument('--angle',type=int, help='angle in degrees to move the servo.',default=0)
+    unlockParse.add_argument('--angle',type=int, help='angle in degrees to move the servo.',default=0)
     unlockParse.set_defaults(func=unlock)
     
     move = subparsers.add_parser('move', help='Move servo to a specific position')
