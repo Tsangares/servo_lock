@@ -65,7 +65,7 @@ def move(pin,angle):
     p.go(angle)
     p.stop()
     
-if __name__=="__main__":
+def main():
     import argparse
     logging.basicConfig(level=logging.INFO)
     parser = argparse.ArgumentParser(description='Control display for escrow.')
