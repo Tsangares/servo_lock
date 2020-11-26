@@ -4,7 +4,7 @@ long_description = open("README.md").read()
 
 setup(
         name='servo-lock',
-        version='0.0.1.4',
+        version='0.0.1.6',
         description='Servo utility for the MG996R; but any servo works.',
         long_description=long_description,
         long_description_content_type="text/markdown",

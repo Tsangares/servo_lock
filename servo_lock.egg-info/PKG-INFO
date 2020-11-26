@@ -1,11 +1,15 @@
 Metadata-Version: 2.1
 Name: servo-lock
-Version: 0.0.1.4
+Version: 0.0.1.6
 Summary: Servo utility for the MG996R; but any servo works.
 Home-page: https://github.com/Tsangares/lock_servo
 Author-email: william.wyatt@cgu.edu
 License: UNKNOWN
-Description: # Summary
+Description: ## Context
+        
+        This tool is showcased in the project [IotaWorkshop](https://github.com/Tsangares/iotaworkshop)
+        
+        # Summary
         
         This tool can be both used as a command line interface or be imported into your project. What this repo has that others do not is some math to calculate the estimated time it takes to rotate the servo to a sepecific destination. The utility handles all the pin IO and all you have to do is specify the location the servo needs to be in and the library will do the rest.
         
